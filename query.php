@@ -4,10 +4,10 @@
 //$pwd='';
 //$db="emergencydb";
 //========
- $host='148.66.138.153';
- $uname='emergencyRoot'; 
- $pwd='emergencyPass';
- $db="emergencydb";
+ $host='166.62.26.1';
+ $uname='agritechno2020'; 
+ $pwd='agritechno2020';
+ $db="agri";
 
 //$conn = new mysqli($host,$uname,$pwd, $db);
 

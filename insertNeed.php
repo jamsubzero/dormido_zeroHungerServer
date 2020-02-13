@@ -4,10 +4,10 @@
 //$pwd='';
 //$db="emapz";
 //========
-$host='148.66.138.153';
-$uname='emergencyRoot'; 
-$pwd='emergencyPass';
-$db="emergencydb";
+ $host='166.62.26.1';
+ $uname='agritechno2020'; 
+ $pwd='agritechno2020';
+ $db="agri";
 
 $conn = new mysqli($host,$uname,$pwd, $db);
 
@@ -19,14 +19,17 @@ if ($conn->connect_error) {
 $flag['code']=0;
 //0 for failed, 1 for success
 
-        // prepare and bind
-$stmt = $conn->prepare("INSERT INTO `needhavedb` (`userID`, `item_name`, `quan`, `unit`, `year`, `month`, `lati`, `longi`, `city`, `province`, `need_have`, `date_time`) 
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, (date_add(now(), INTERVAL 15 hour)));");
-$stmt->bind_param("sssssssssss", $userID, $item_name, $quan, $unit, $year, $month, $lati, $longi, $city, $province, $need_have);
+
+// prepare and bind
+        
+$stmt = $conn->prepare("INSERT INTO `needhavedb` (`userID`, `type`, `item_name`, `quan`, `unit`, `year`, `month`, `latitude`, `longitude`, `city`, `province`, `need_have`, `date_time`) 
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, (date_add(now(), INTERVAL 15 hour)));");
+$stmt->bind_param("ssssssssssss", $userID, $type, $item_name, $quan, $unit, $year, $month, $lati, $longi, $city, $province, $need_have);
+
 
 // set parameters and execute
-
 $userID = $_REQUEST['userID'];
+$type = $_REQUEST['type'];
 $item_name = $_REQUEST['item_name'];
 $quan = $_REQUEST['quan'];
 $unit = $_REQUEST['unit'];
