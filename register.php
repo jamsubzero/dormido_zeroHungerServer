@@ -11,7 +11,7 @@ $inputJSON = file_get_contents('php://input');
 //         "type": 1,
 //         "name": "r",
 //         "email": "",
-//         "mobile": "11111111112", 
+//         "mobile": "11111111222", 
 //         "password": "12345678"
 //     }
 // ';
@@ -28,8 +28,10 @@ $stmtnumber->close();
 
 $stmtemail = $conn->prepare("SELECT users.email FROM users WHERE users.email = ?");
 $stmtemail->bind_param("s",$input->email);
-$stmtemail->execute();
-$emailn = $stmtemail->fetch();
+if($input->email){
+    $stmtemail->execute();
+    $emailn = $stmtemail->fetch();
+}
 $stmtemail->close();
 
 if($mobilen){
