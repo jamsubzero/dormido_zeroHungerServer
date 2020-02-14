@@ -10,3 +10,28 @@
 [12-Feb-2020 14:55:33 UTC] PHP Notice:  Undefined index: province in /home/uch0p6v0iifa/public_html/agri/insertNeed.php on line 41
 [12-Feb-2020 14:55:36 UTC] PHP Notice:  Undefined index: city in /home/uch0p6v0iifa/public_html/agri/insertNeed.php on line 40
 [12-Feb-2020 14:55:36 UTC] PHP Notice:  Undefined index: province in /home/uch0p6v0iifa/public_html/agri/insertNeed.php on line 41
+[14-Feb-2020 05:26:17 UTC] PHP Warning:  include(../conn.php): failed to open stream: No such file or directory in /home/uch0p6v0iifa/public_html/agri/register.php on line 5
+[14-Feb-2020 05:26:17 UTC] PHP Warning:  include(): Failed opening '../conn.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/uch0p6v0iifa/public_html/agri/register.php on line 5
+[14-Feb-2020 05:26:17 UTC] PHP Notice:  Undefined variable: conn in /home/uch0p6v0iifa/public_html/agri/register.php on line 23
+[14-Feb-2020 05:26:17 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/uch0p6v0iifa/public_html/agri/register.php:23
+Stack trace:
+#0 {main}
+  thrown in /home/uch0p6v0iifa/public_html/agri/register.php on line 23
+[14-Feb-2020 05:26:34 UTC] PHP Warning:  include(../conn.php): failed to open stream: No such file or directory in /home/uch0p6v0iifa/public_html/agri/register.php on line 5
+[14-Feb-2020 05:26:34 UTC] PHP Warning:  include(): Failed opening '../conn.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/uch0p6v0iifa/public_html/agri/register.php on line 5
+[14-Feb-2020 05:26:34 UTC] PHP Notice:  Undefined variable: conn in /home/uch0p6v0iifa/public_html/agri/register.php on line 23
+[14-Feb-2020 05:26:34 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/uch0p6v0iifa/public_html/agri/register.php:23
+Stack trace:
+#0 {main}
+  thrown in /home/uch0p6v0iifa/public_html/agri/register.php on line 23
+[14-Feb-2020 05:27:11 UTC] PHP Warning:  include(../conn.php): failed to open stream: No such file or directory in /home/uch0p6v0iifa/public_html/agri/register.php on line 5
+[14-Feb-2020 05:27:11 UTC] PHP Warning:  include(): Failed opening '../conn.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/uch0p6v0iifa/public_html/agri/register.php on line 5
+[14-Feb-2020 05:27:11 UTC] PHP Notice:  Undefined variable: conn in /home/uch0p6v0iifa/public_html/agri/register.php on line 23
+[14-Feb-2020 05:27:11 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/uch0p6v0iifa/public_html/agri/register.php:23
+Stack trace:
+#0 {main}
+  thrown in /home/uch0p6v0iifa/public_html/agri/register.php on line 23
+[14-Feb-2020 13:31:32 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/uch0p6v0iifa/public_html/agri/register.php:41
+Stack trace:
+#0 {main}
+  thrown in /home/uch0p6v0iifa/public_html/agri/register.php on line 41
