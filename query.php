@@ -4,10 +4,10 @@
 //$pwd='';
 //$db="emergencydb";
 //========
- $host='166.62.26.1';
- $uname='agritechno2020'; 
- $pwd='agritechno2020';
- $db="agri";
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: POST");
+header("Content-Type: application/json; charset=UTF-8");
+include 'conn.php';
 
 //$conn = new mysqli($host,$uname,$pwd, $db);
 
