@@ -44,8 +44,7 @@ while($stmt->fetch()) {
     //  "mobile" => $mobile
     // );
 
-    $tmp["id"] = $id;
-    $tmp["recID"] = $recID;
+    $tmp["id"] = $recID;
     $tmp["type"] = $type; 
     $tmp["item_name"] = $item_name; 
     $tmp["quan"] = $quan;
