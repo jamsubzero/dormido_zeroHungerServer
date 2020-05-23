@@ -10,9 +10,9 @@ header("Content-Type: application/json; charset=UTF-8");
 include 'conn.php';
 
 // Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+// if ($conn->connect_error) {
+//     die("Connection failed: " . $conn->connect_error);
+// }
 
 $flag['code']=0;
 //0 for failed, 1 for success

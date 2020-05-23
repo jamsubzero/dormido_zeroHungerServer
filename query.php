@@ -14,11 +14,11 @@ include 'conn.php';
 //$stmt = $conn->prepare("SELECT * FROM needhavedb WHERE `type` = ? AND item_name = ?");
 
 // Create connection
-$conn = mysqli_connect($host, $uname, $pwd, $db);
+// $conn = mysqli_connect($host, $uname, $pwd, $db);
 // Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+// if (!$conn) {
+//     die("Connection failed: " . mysqli_connect_error());
+// }
 
 $needhave = $_GET['needhave'];
 $year = $_GET['year'];
