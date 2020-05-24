@@ -25,7 +25,7 @@ if($input == null){
 }
 
 $stmt->execute();
-$stmt->bind_result($recID, $type, $item_name, $quan, $unit, $year, $month, $latitude, $longitude, $city, $province, $need_have, $date_time, $name, $mobile);
+$stmt->bind_result($recID, $type, $item_name, $quan, $unit, $year, $month, $latitude, $longitude, $city, $province, $need_have, $date_time, $name, $mobile, $email);
 
 $tmp = array();
 $data = array();
@@ -67,6 +67,7 @@ while($stmt->fetch()) {
     $tmp["date_time"] = $date_time; 
     $tmp["name"] = $name;
     $tmp["mobile"] = $mobile;
+    $tmp["email"] = $email;
     
     array_push($data, $tmp);
     
