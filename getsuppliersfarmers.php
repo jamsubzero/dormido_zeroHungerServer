@@ -15,7 +15,15 @@ $input = json_decode($inputJSON, FALSE); //convert JSON into array
 
 $output = array();
 
-$stmt = $conn->prepare("SELECT recID, needhavedb.type, item_name, quan, unit, year, month, latitude, longitude, city, province, need_have, date_time, NAME, mobile FROM needhavedb INNER JOIN users on needhavedb.userID = users.id;");
+if($input == null){
+    $stmt = $conn->prepare("SELECT recID, needhavedb.type, item_name, quan, unit, year, month, latitude, longitude, city, province, need_have, date_time, NAME, mobile, email FROM needhavedb INNER JOIN users on needhavedb.userID = users.id;");
+}else{
+    $stmt = $conn->prepare("SELECT recID, needhavedb.type, item_name, quan, unit, year, month, latitude, longitude, city, province, need_have, date_time, NAME, mobile, email FROM needhavedb INNER JOIN users on needhavedb.userID = users.id WHERE recID = ?;");
+    $stmt->bind_param("i",
+        $input->id
+    );
+}
+
 $stmt->execute();
 $stmt->bind_result($recID, $type, $item_name, $quan, $unit, $year, $month, $latitude, $longitude, $city, $province, $need_have, $date_time, $name, $mobile);
 
