@@ -39,7 +39,7 @@ if($mobilen){
 }else if($emailn){
     $output = array("status" => 12, "message" => "Email Address already exist!");
 }else{
-    $stmt = $conn->prepare("INSERT INTO users VALUES(NULL,?,?,?,?,MD5(?));");
+    $stmt = $conn->prepare("INSERT INTO users VALUES(NULL,?,?,?,?,MD5(?), '$datenow');");
     $stmt->bind_param("issss",
         $input->type,
         $input->name,
