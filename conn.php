@@ -1,9 +1,9 @@
 <?php
 
-define('DB_USER', "agritechno2020"); // db user
-define('DB_PASSWORD', "agritechno2020"); // db password
+define('DB_USER', "agritechnouser"); // db user
+define('DB_PASSWORD', "agritechnouser"); // db password
 define('DB_DATABASE', "agri"); // database name
-define('DB_SERVER', "166.62.26.1"); // db server
+define('DB_SERVER', "166.62.10.227"); // db server
  
 $conn = mysqli_connect(DB_SERVER,DB_USER,DB_PASSWORD,DB_DATABASE);
 

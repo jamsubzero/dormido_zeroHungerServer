@@ -21,7 +21,7 @@ $flag['code']=0;
 // prepare and bind
         
 $stmt = $conn->prepare("INSERT INTO `needhavedb` (`userID`, `type`, `item_name`, `quan`, `unit`, `year`, `month`, `latitude`, `longitude`, `city`, `province`, `need_have`, `date_time`) 
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, (date_add(now(), INTERVAL 15 hour)));");
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, '$datenow');");
 $stmt->bind_param("ssssssssssss", $userID, $type, $item_name, $quan, $unit, $year, $month, $lati, $longi, $city, $province, $need_have);
 
 
