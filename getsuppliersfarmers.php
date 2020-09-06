@@ -16,16 +16,16 @@ $input = json_decode($inputJSON, FALSE); //convert JSON into array
 $output = array();
 
 if($input == null){
-    $stmt = $conn->prepare("SELECT recID, needhavedb.type, item_name, quan, unit, year, month, latitude, longitude, city, province, need_have, date_time, NAME, mobile, email FROM needhavedb INNER JOIN users on needhavedb.userID = users.id;");
+    $stmt = $conn->prepare("SELECT recID, needhavedb.type, item_name, quan, unit, year, month, latitude, longitude, city, province, need_have, date_time, NAME, mobile, email, price FROM needhavedb INNER JOIN users on needhavedb.userID = users.id;");
 }else{
-    $stmt = $conn->prepare("SELECT recID, needhavedb.type, item_name, quan, unit, year, month, latitude, longitude, city, province, need_have, date_time, NAME, mobile, email FROM needhavedb INNER JOIN users on needhavedb.userID = users.id WHERE recID = ?;");
+    $stmt = $conn->prepare("SELECT recID, needhavedb.type, item_name, quan, unit, year, month, latitude, longitude, city, province, need_have, date_time, NAME, mobile, email, price FROM needhavedb INNER JOIN users on needhavedb.userID = users.id WHERE recID = ?;");
     $stmt->bind_param("i",
         $input->id
     );
 }
 
 $stmt->execute();
-$stmt->bind_result($recID, $type, $item_name, $quan, $unit, $year, $month, $latitude, $longitude, $city, $province, $need_have, $date_time, $name, $mobile, $email);
+$stmt->bind_result($recID, $type, $item_name, $quan, $unit, $year, $month, $latitude, $longitude, $city, $province, $need_have, $date_time, $name, $mobile, $email, $price);
 
 $tmp = array();
 $data = array();
@@ -68,6 +68,7 @@ while($stmt->fetch()) {
     $tmp["name"] = $name;
     $tmp["mobile"] = $mobile;
     $tmp["email"] = $email;
+    $tmp["price"] = $price;
     
     array_push($data, $tmp);
     
