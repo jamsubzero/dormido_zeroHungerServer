@@ -20,9 +20,9 @@ $flag['code']=0;
 
 // prepare and bind
         
-$stmt = $conn->prepare("INSERT INTO `needhavedb` (`userID`, `type`, `item_name`, `quan`, `unit`, `year`, `month`, `latitude`, `longitude`, `city`, `province`, `need_have`, `date_time`) 
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, '$datenow');");
-$stmt->bind_param("ssssssssssss", $userID, $type, $item_name, $quan, $unit, $year, $month, $lati, $longi, $city, $province, $need_have);
+$stmt = $conn->prepare("INSERT INTO `needhavedb` (`userID`, `type`, `item_name`, `quan`, `unit`, `year`, `month`, `latitude`, `longitude`, `city`, `province`, `need_have`, `date_time`, `price`) 
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, '$datenow', ?);");
+$stmt->bind_param("ssssssssssssd", $userID, $type, $item_name, $quan, $unit, $year, $month, $lati, $longi, $city, $province, $need_have, $price);
 
 
 // set parameters and execute
@@ -38,6 +38,7 @@ $longi = $_REQUEST['longi'];
 $city = $_REQUEST['city'];
 $province = $_REQUEST['province'];
 $need_have = $_REQUEST['need_have'];
+$price = $_REQUEST['price'];
 
 
 $success = $stmt->execute();
